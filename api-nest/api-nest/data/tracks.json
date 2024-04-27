@@ -1,0 +1,35 @@
+{
+  "tracks": [
+    {
+      "id": 1,
+      "title": "Fast Car",
+      "duration": 385,
+      "artist": "Luke Combs"
+    },
+    {
+      "id": 3,
+      "title": "La Canción de las Bestias",
+      "duration": 249,
+      "artist": "Fito Paez"
+    },
+    {
+      "id": 4,
+      "title": "Calm Down",
+      "duration": 240,
+      "artist": "Rema & Selena Gomez"
+    },
+    {
+      "id": 5,
+      "title": "I Can See You (Taylor's Version) (From The Vault)",
+      "duration": 273,
+      "artist": "Taylor Swift"
+    },
+    {
+      "id": 6,
+      "title": "Flowers",
+      "duration": 200,
+      "artist": "Miley Cyrus"
+    }
+   
+  ]
+}
