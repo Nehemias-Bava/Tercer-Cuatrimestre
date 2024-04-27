@@ -1,5 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { iTrack } from './track.interface';
+import { TrackDto } from './track.dto';
 const base_url: string = 'http://localhost:3030/tracks/';
 @Injectable()
 export class TrackService {
@@ -18,8 +19,8 @@ export class TrackService {
     }
   }
 
-  async addTrack(track: iTrack): Promise<iTrack> {
-    const newTrack = { ...track };
+  async addTrack(trackDto: TrackDto): Promise<iTrack> {
+    const newTrack = { ...trackDto };
     const res = await fetch(base_url, {
       method: 'POST',
       headers: {

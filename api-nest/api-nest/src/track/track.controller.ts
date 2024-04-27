@@ -13,6 +13,7 @@ import {
 } from '@nestjs/common';
 import { TrackService } from './track.service';
 import { iTrack } from './track.interface';
+import { TrackDto } from './track.dto';
 
 @Controller('tracks')
 export class TrackController {
@@ -34,8 +35,8 @@ export class TrackController {
   }
 
   @Post()
-  create(@Body() track: iTrack) {
-    return this.trackService.addTrack(track);
+  create(@Body() trackDto: TrackDto): Promise<any> {
+    return this.trackService.addTrack(trackDto);
   }
 
   @Delete(':id')
