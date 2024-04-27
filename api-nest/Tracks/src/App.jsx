@@ -1,15 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
+import { gesSongs } from "./api/getSongs"
+import { SongCar } from ".Card"
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [songs, setSongs] = useState([])
+
+  useEffect(()=> {
+    getSong()
+    .then((res)=> res.json()) 
+    .then((data)=> gesSongs(data))
+  }, []);
 
   return (
     <>
       <div>
-        <h1>Tracks</h1>
+
+        <h2>Tracks</h2>
+        <h3>
+
+            {songs.map((song) => (<SongCard song={song} key={song.id}/>))}
+
+        </h3>
+        
       </div>
     
     </>
